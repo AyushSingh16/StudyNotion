@@ -1,0 +1,33 @@
+{
+  "name": "16_studynotion",
+  "version": "1.0.0",
+  "description": "StudyNotion is a fully functional Ed-Tech Platform that enables users to Create, Consume, and Rate educational content. The platform is built using the M.E.R.N. Stack, which includes ReactJS, NodeJS, MongoDB, and ExpressJS as the key-technologies.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyushSingh16/StudyNotion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AyushSingh16/StudyNotion/issues"
+  },
+  "homepage": "https://github.com/AyushSingh16/StudyNotion#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9",
+    "otp-generator": "^4.0.1"
+  }
+}
