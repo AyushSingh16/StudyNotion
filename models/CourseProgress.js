@@ -10,6 +10,6 @@ const courseProgress = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: "SubSection",
     },
-  ],
+  ]
 });
-module.exports = mongoose.models("courseProgress", courseProgress);
+module.exports = mongoose.model("courseProgress", courseProgress);

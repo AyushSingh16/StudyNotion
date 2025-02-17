@@ -45,7 +45,7 @@ const userSchema = new mongoose.Schema({
       type: String,
       ref: "CourseProgress",
     },
-  ],
+  ]
 });
 
-module.exports = mongoose.models("User", userSchema);
+module.exports = mongoose.model("User", userSchema);
