@@ -232,3 +232,12 @@ exports.login = async (req, res) => {
 };
 
 //change password
+exports.changePassword = async(req,res)=>{
+    //get data from req body
+    //getOldPassword, newPassword, confirmNewPassword
+    //validation
+
+    //update password in DB
+    //send mail - password updated
+    //return response
+}
