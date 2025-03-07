@@ -21,7 +21,7 @@ exports.auth = async (req, res, next) => {
 
     //verify the token
     try {
-      const decode = await jwt.verify(token, process.env.JWT_SECRET);
+      const decode = jwt.verify(token, process.env.JWT_SECRET);
       console.log(decode);
       req.user = decode;
     } catch (error) {
@@ -39,8 +39,28 @@ exports.auth = async (req, res, next) => {
     });
   }
 };
+
+
 //isStudent
+exports.isStudent = async(req,res,next)=>{
+    try{
+        if(req.user.accountType !== "Student"){
+            return res.status(401).json({
+                success:false,
+                message:"This is a protected route for Students only",
+            });
+        }
+        next();
+    }
+    catch(error){
+        return res.status(500).json({
+            success:false,
+            message:"User role cannot be verified",
+        });
+    }
+}
 
 //isInstructor
+
 
 //isAdmin
