@@ -1,5 +1,6 @@
 const Section = require("../models/Section");
 const SubSection = require("../models/SubSection");
+const {uploadImageToCloudinary} = require("../utils/imageUploader");
 
 //create subsection
 
@@ -22,7 +23,7 @@ exports.createSubSection = async (req, res) => {
       process.env.FOLDER_NAME
     );
     //create subsection
-    const SubSectionDetails = await SubSection.create({
+    const subSectionDetails = await SubSection.create({
       title: title,
       timeDuration: timeDuration,
       description: description,
@@ -55,3 +56,8 @@ exports.createSubSection = async (req, res) => {
     });
   }
 };
+
+
+//update subsection
+
+//delete subsection
