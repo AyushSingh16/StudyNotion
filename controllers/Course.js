@@ -1,10 +1,10 @@
 const Course = require("../models/Course");
-const Tag = require("../models/Tag");
+const Category = require("../models/Category");
 const User = require("../models/User");
 const { uploadImageToCloudinary } = require("../utils/imageUploader");
 
 //createCourse handler function
-exports.createCourse = async (req, res) => {
+exports.createCategory = async (req, res) => {
   try {
     //fetch data
     const { courseName, courseDescription, whatYouWillLearn, price, tag } =
@@ -41,11 +41,11 @@ exports.createCourse = async (req, res) => {
     }
 
     //check whether given tag is valid or not
-    const tagDetails = await Tag.findById(tag);
-    if (!tagDetails) {
+    const categoryDetails = await Category.findById(tag);
+    if (!categoryDetails) {
       return res.status().json({
         success: false,
-        message: "Tag details not found",
+        message: "Category details not found",
       });
     }
 
@@ -98,16 +98,16 @@ exports.createCourse = async (req, res) => {
 };
 
 //getAllCourses handler function
-exports.showAllCourses = async (req, res) => {
+exports.showAllCategories = async (req, res) => {
   try {
 
     //todo: update the below code
-    const allCourses = await Course.find({});
+    const allCategories = await Category.find({});
 
     return res.status(200).json({
       success: true,
       message: "Data for all courses fetched successfully",
-      data: allCourses,
+      data: allCategories,
     });
   } catch (error) {
     console.log(error);
