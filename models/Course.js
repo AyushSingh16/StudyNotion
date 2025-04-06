@@ -42,7 +42,8 @@ const courseSchema = new mongoose.Schema({
     ref: "category",
   },
   tag:{
-    type:String,
+    type:[String],
+    required:true,
   },
   studentsEnrolled: [
     {
